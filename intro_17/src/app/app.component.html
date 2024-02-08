@@ -1,0 +1,45 @@
+<!--<p *ngFor = "let s of lista">{{s}}</p>-->
+<!--@for (item of lista; track $index) {
+  <p>{{item}}</p>
+}-->
+
+<form style="padding-left: 30px;">
+  <div style="width: 18rem;">
+    <label for = "numero1" class="form-label">Inserisci il primo numero:</label>
+    <input class = "form-control" name = "numero1" #num1>
+  </div>
+  <br>
+  <div style="width: 18rem;">
+    <label for = "numero2" class="form-label">Inserisci il secondo numero:</label>
+    <input class = "form-control" name = "numero2" #num2>
+  </div>
+  <br>
+  <div>
+    <button (click)="addizione(num1, num2)" class="btn btn-warning">
+      +
+    </button>
+  </div>
+  <br>
+  <div>
+    <button (click)="sottrazione(num1, num2)" class="btn btn-warning">
+      -
+    </button>
+  </div>
+  <br>
+  <div>
+    <button (click)="moltiplicazione(num1, num2)" class="btn btn-warning">
+      *
+    </button>
+  </div>
+  <br>
+  <div>
+    <button (click)="divisione(num1, num2)" class="btn btn-warning">
+      /
+    </button>
+  </div>
+</form>
+<br>
+<br>
+<div style="padding-left: 30px;">
+  <app-component1 [risultato]="ris" [listaNumeri]="lista"></app-component1>
+</div>
