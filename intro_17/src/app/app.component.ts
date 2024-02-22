@@ -11,30 +11,26 @@ import { Component1Component } from './component1/component1.component';
 })
 export class AppComponent {
   ris: Number;
-  lista: Number[];
+  lista: Number[] = [];   //dichiaro la lista vuota per poterla riempire dopo
   addizione(n1: HTMLInputElement, n2: HTMLInputElement) : boolean {
     this.ris = Number(n1.value) + Number(n2.value);
-    this.stampone(Number(n1.value), Number(n2.value));
     return false
   }
   sottrazione(n1: HTMLInputElement, n2: HTMLInputElement) : boolean {
     this.ris = Number(n1.value) - Number(n2.value);
-    this.stampone(Number(n1.value), Number(n2.value));
     return false
   }
   moltiplicazione(n1: HTMLInputElement, n2: HTMLInputElement) : boolean {
     this.ris = Number(n1.value) * Number(n2.value);
-    this.stampone(Number(n1.value), Number(n2.value));
     return false
   }
   divisione(n1: HTMLInputElement, n2: HTMLInputElement) : boolean {
     this.ris = Number(n1.value) / Number(n2.value);
-    this.stampone(Number(n1.value), Number(n2.value));
     return false
   }
-  stampone(n1, n2) : boolean {
-    let a = Number(n1);
-    let b = Number(n2);
+  stampone(n1: HTMLInputElement, n2: HTMLInputElement) : boolean {
+    let a = Number(n1.value);
+    let b = Number(n2.value);
     for (let i = a; i <= b; i++) {
       this.lista.push(i);
     }
